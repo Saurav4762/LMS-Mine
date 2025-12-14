@@ -1,3 +1,6 @@
+using LMS_project.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +11,12 @@ builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAuthorization();
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddDbContext<ApplicationDbContext>(b =>
+{
+    var connectionstring = builder.Configuration.GetConnectionString("DefaultConnection");
+    b.UseNpgsql(connectionstring);
+});
 
 var app = builder.Build();
 
