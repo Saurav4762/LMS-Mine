@@ -2,5 +2,5 @@
 
 public class CategoryRequestDt0
 {
-    
+    public string CategoryName { get; set; }
 }

@@ -2,5 +2,7 @@
 
 public class AuthorRequestDto
 {
+    public string Name { get; set; }
     
+    public string country { get; set; }
 }
