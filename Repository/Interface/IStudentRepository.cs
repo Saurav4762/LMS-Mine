@@ -1,6 +1,12 @@
-﻿namespace LMS_project.Repository.Interface;
+﻿using LMS_project.Contracts.ResponseDto;
+using LMS_project.Entities;
 
-public class IStudentRepository
+namespace LMS_project.Repository.Interface;
+
+public interface IStudentRepository 
 {
+    Task<List<StudentResponseDto>> GetAllStudentsAsync() ;
+    
+    Task<StudentResponseDto> GetStudentsByIdAsync(int id);
     
 }
