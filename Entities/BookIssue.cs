@@ -4,7 +4,7 @@ public class BookIssue
 {
     public int BookIssueId { get; set; }
     
-    public DateTime issueDate { get; set; }
+    public DateTime IssueDate { get; set; }
     public DateTime? ReturnDate { get; set; }
     
     // Foreign keys
